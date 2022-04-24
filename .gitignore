@@ -1,0 +1,8 @@
+.idea/
+.vscode/
+
+**/dist/
+**/*.db
+
+__pychache__/*
+*.py[ci]
