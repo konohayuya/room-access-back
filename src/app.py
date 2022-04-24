@@ -9,6 +9,7 @@ api = fastapi.FastAPI()
 
 api.include_router(state.router)
 api.include_router(bus.router)
+api.include_router(static_html.router)
 
 
 def main():
