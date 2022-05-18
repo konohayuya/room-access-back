@@ -53,6 +53,7 @@ def __create_state_table(conn: sqlite3.Connection):
 
     conn.execute(query)
 
+    # delete data if exists data is before yesterday
     trigger_query_insert = ('CREATE TRIGGER IF NOT EXISTS auto_reset_state '
                             'BEFORE INSERT ON room_state '
                             'WHEN datetime(date(\'now\', \'localtime\') || \' 00:00:00\') '
